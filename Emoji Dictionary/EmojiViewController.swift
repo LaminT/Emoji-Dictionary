@@ -10,42 +10,20 @@ import UIKit
 
 class EmojiViewController: UIViewController {
     
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var birthLabel: UILabel!
     @IBOutlet weak var emojiDefinitionLabel: UILabel!
     @IBOutlet weak var emojiLabel: UILabel!
-    var emoji = ""
+    var emoji = Emoji()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emojiLabel.text = emoji
+        emojiLabel.text = emoji.daEmoji
+        emojiDefinitionLabel.text = emoji.def
+        birthLabel.text = "Release Date: \(emoji.releaseDate)"
+        categoryLabel.text = "Category: \(emoji.category)"
         
-        
-        if emoji == "😀"  {
-            emojiDefinitionLabel.text = "Grinning face"
-        }
-        if emoji == "💩"  {
-            emojiDefinitionLabel.text = "Pile Of Poo"
-        }
-        if emoji == "🏎"  {
-            emojiDefinitionLabel.text = "A Racecar sponsored by Swift"
-        }
-        if emoji == "🕋"  {
-            emojiDefinitionLabel.text = "Kaaba"
-        }
-        if emoji == "🍎"  {
-            emojiDefinitionLabel.text = "Red Apple"
-        }
-        if emoji == "🥑"  {
-            emojiDefinitionLabel.text = "Avocado"
-        }
-        if emoji == "🕌"  {
-            emojiDefinitionLabel.text = "Mosque"
-        }
-        if emoji == "⚽️"  {
-            emojiDefinitionLabel.text = "Soccer ball"
-        }
-        
-
     }
 
 }

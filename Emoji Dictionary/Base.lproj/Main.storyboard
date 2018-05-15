@@ -58,8 +58,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A racecar sponsored by Swift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq1-Cp-MPN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Racing Car sponsored by Swift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq1-Cp-MPN">
                                 <rect key="frame" x="10" y="636" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Year: 2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsV-YQ-hA7">
+                                <rect key="frame" x="114.5" y="607" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Travel &amp; Places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbe-Gq-4gV">
+                                <rect key="frame" x="89.5" y="578" width="196" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,15 +79,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="KsV-YQ-hA7" firstAttribute="centerX" secondItem="J9v-Ct-CNG" secondAttribute="centerX" id="4aE-GU-FWs"/>
                             <constraint firstItem="BqJ-4C-A7g" firstAttribute="top" secondItem="shK-7X-l5e" secondAttribute="top" constant="20" id="NWf-GA-fmh"/>
+                            <constraint firstItem="fbe-Gq-4gV" firstAttribute="centerX" secondItem="J9v-Ct-CNG" secondAttribute="centerX" id="RJp-rv-tZJ"/>
                             <constraint firstItem="BqJ-4C-A7g" firstAttribute="centerX" secondItem="J9v-Ct-CNG" secondAttribute="centerX" id="eF3-jB-tt3"/>
                             <constraint firstItem="Uq1-Cp-MPN" firstAttribute="leading" secondItem="shK-7X-l5e" secondAttribute="leading" constant="10" id="hON-f0-rgC"/>
                             <constraint firstItem="shK-7X-l5e" firstAttribute="bottom" secondItem="Uq1-Cp-MPN" secondAttribute="bottom" constant="10" id="l8z-XC-ZbK"/>
+                            <constraint firstItem="Uq1-Cp-MPN" firstAttribute="top" secondItem="KsV-YQ-hA7" secondAttribute="bottom" constant="8" id="r2W-FZ-Yyv"/>
                             <constraint firstItem="shK-7X-l5e" firstAttribute="trailing" secondItem="Uq1-Cp-MPN" secondAttribute="trailing" constant="10" id="u04-gL-Qda"/>
+                            <constraint firstItem="KsV-YQ-hA7" firstAttribute="top" secondItem="fbe-Gq-4gV" secondAttribute="bottom" constant="8" id="zVp-xG-jFm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="shK-7X-l5e"/>
                     </view>
                     <connections>
+                        <outlet property="birthLabel" destination="KsV-YQ-hA7" id="NU7-Rk-yXt"/>
+                        <outlet property="categoryLabel" destination="fbe-Gq-4gV" id="5Qr-Jc-NZe"/>
                         <outlet property="emojiDefinitionLabel" destination="Uq1-Cp-MPN" id="AAm-5G-cUK"/>
                         <outlet property="emojiLabel" destination="BqJ-4C-A7g" id="gYI-oX-2Pu"/>
                     </connections>
